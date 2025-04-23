@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+}
+// Exam-2
+// 2 FOR 
+// 2 Each
+// 2 Mixin va ziyodtar 
+// 2 map 
+
+
+$center:center;
+ @each $text in $center {
+        .-#{$text}{
+            text-align: $center;
+        }
+}
+    $colo : #0B4A72;
+    
+    @mixin button_style (){
+        background-color: #E6F2B4;
+        color: rgb(10, 10, 152);
+        padding: 17px 29px;
+        border-radius: 30px;
+        border: none;
+        font-size: 18px
+    }
+    @mixin bt_hover (){
+        background-color: orange;
+        transform: scale(1.3);
+        transition: 1.1s
+    }
+    button:hover {
+        @include bt_hover();
+    }
+    
+    .bt {
+        @include button_style() ;
+        margin-left: 190px;
+        margin-top: 10px;
+        margin-bottom: 320px;
+    }
+    $display: center,space-between;
+    
+    @each $display in $display {
+        .#{$display}{
+            display: flex;
+            justify-content: $display;
+        }
+    }
+    
+    .bolo {
+        width: 90%;
+        margin: auto;
+        padding: 25px 0px;
+        align-items: center;
+        .dr {
+            width: 14%;
+        }
+    }
+    .bi {
+        background-color: #FEF8F1;
+        padding-top: 100px;
+        h1 {
+            font-size: 70px;
+            color: #0B4A72; 
+            text-align: center;       
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .ab {
+            position: absolute;
+            width: 90%;
+            top: 380px;
+        }
+    }
+    .l {
+        font-size: 55px;
+        color: $colo;
+        margin-top: 200px !important;
+        margin-bottom: 100px;
+    }
+
+    
+
+ .kk {
+    width: 31%;
+    color: $colo;       
+}
+@for $i from 1 through 3 {
+    .#{$i}{
+        width: 31%;
+        background-color: #FEF8F1;
+    }
+}
+.img {
+    margin-left: 100px !important;
+}
+.vi {
+    width: 80%;
+    margin: auto;
+    margin-top: 300px;
+    align-items: center;
+    margin-bottom: 80px;
+    .kivi {
+        color: $colo;
+        width: 40%;
+        h2 {
+            font-size: 37px;
+            margin-bottom: 40px;
+        }
+        h3 {
+            color: gray;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+.o {
+    color: #000000B2;
+}
+.er {
+    font-size: 60px;
+    color: $colo;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.eg {
+    width: 85%;
+    margin: auto;
+    align-items: center;
+    margin-top: 250px;
+    justify-content: space-between;
+    .ke {
+        width: 43%;
+        .m {
+            color: $colo;
+            font-size: 60px;
+        }
+        .m1 {
+            color: #000000B2;
+            margin-top: 30px;
+            font-size: 28px;
+        }
+    }
+}
+.q {
+    width: 30%;
+    margin: auto;
+    margin-top: 200px;
+    color: $colo;
+    .q1 {
+        font-size: 55px;
+        margin-bottom: 100px;
+    }
+    h2 {
+        margin-top: 30px;
+    }
+}
+.be {
+    background-color: #cef7d136;
+    position: absolute;
+    top: 450vh;
+    .ss {
+        margin-left: 1330px;
+    }
+}
+.fr {
+    width: 80%;
+    margin: auto;
+    margin-top: 500px;
+    .kef {
+        width: 45%;
+        h1 {
+            color: $colo;
+            font-size: 58px;
+            margin-bottom: 150px;
+        }
+
+        h2 {
+            margin-top: 8px;
+        }
+    }
+}
+.bas {
+   background-color: #FFFAF4;
+   padding: 60px 0px 0px 0px;
+   margin-top: 20px;
+   h1 {
+    color: $colo;
+    font-size: 75px;
+    margin-top: 120px;
+   }
+    .bt1 {
+        margin-left: -20px;
+        margin-bottom: 0px;
+        margin-top: 60px;
+    }
+}
+$map-color:(
+    blue:#0B4A72,
+    gray: #000000B2,
+);
+@each $name ,$colors in $map-color {
+    .#{map}{
+        color: $colors;
+    }
+} 
+.okh {
+    background-color: #FFFAF4;
+    padding: 150px 0px 0px 0px;
+    justify-content: space-around;
+    color: $colo;
+    .kh {
+        width: 45%;
+    }
+    .bh {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .dx {
+        width: 13%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            height: 30px;
+        }
+    }
+}
+.jh {
+    width: 85%;
+    padding: 0px 7% ;
+    padding-bottom: 20px;
+    margin: auto;
+    background-color: #FFFAF4 ;
+    padding-top: 170px;
+    color: gray;
+
+}
+.lk {
+    padding: 40px 0px;
+    margin-left: 90px;
+    display: flex;
+    gap: 60px;
+}
